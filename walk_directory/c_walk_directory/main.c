@@ -32,9 +32,9 @@ void walk_directory(const char *dir_path) {
     int len =
         snprintf(path_buf, sizeof(path_buf), "%s/%s", dir_path, entry->d_name);
 
-    // If the path was longer than 1024 bytes, bail out for this file
-    if (len >= sizeof(path_buf)) {
-      fprintf(stderr, "Warning: Path too long, skipped -> %s\n", entry->d_name);
+    if (len < 0 || (size_t)len >= sizeof(path_buf)) {
+      fprintf(stderr, "Warning: Path error or buffer overflow skipped -> %s\n",
+              entry->d_name);
       continue;
     }
 
