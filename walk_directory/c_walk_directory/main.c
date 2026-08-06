@@ -40,7 +40,7 @@ void walk_directory(const char *dir_path) {
 
     // 5. Query the OS for file metadata to check if it's a directory
     struct stat statbuf;
-    if (stat(path_buf, &statbuf) == -1) {
+    if (lstat(path_buf, &statbuf) == -1) {
       perror("Failed to get file stats");
       continue;
     }
