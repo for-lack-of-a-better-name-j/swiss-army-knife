@@ -1,10 +1,6 @@
-use std::{
-    env,
-    error::Error,
-    path::{Path, PathBuf},
-};
+use std::{env, error::Error, path::PathBuf};
 
-use walkdir::{DirEntry, WalkDir};
+use walkdir::WalkDir;
 
 fn main() -> Result<(), Box<dyn Error>> {
     // Get the 1st argument (index 1), or default to "."
