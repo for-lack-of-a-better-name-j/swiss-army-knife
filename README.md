@@ -20,3 +20,15 @@ in C, C++, Rust, and Python:
 13. Building and linking a native library (.a/.so compilation)
 
 
+# Why there are flamegraphs for each tool
+
+I thought as I got into it it might be a good time to get familiar with some
+typical tools that are used in software performance engineering. So I made
+some flamegraphs to compare the behavior of different languages!
+
+For `walk_directory` I decided to showcase Python vs. C here.
+For Python:
+![Python walk_directory flamegraph](./walk_directory/python_walk_directory/python_walker.svg)
+
+For C:
+![C walk_directory flamegraph](./walk_directory/c_walk_directory/c_walker.svg)
