@@ -14,7 +14,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         println!("{}", entry.path().display());
         // to check if it is a file: (do note that is_file() will return false
         // if the user does not have sufficient permissions)
-        println!("{}", entry.path().is_file());
+        // println!("{}", entry.path().is_file());
     }
 
     Ok(())
