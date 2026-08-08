@@ -15,3 +15,11 @@ execution time on each script:
 | `./c_walk_directory/walker ~/Downloads` | 41.3 ± 0.8 | 39.8 | 44.1 | 1.27 ± 0.04 |
 | `./cpp_walk_directory/walker_cpp ~/Downloads/` | 49.5 ± 0.9 | 48.0 | 53.1 | 1.53 ± 0.05 |
 
+## Python Flamegraph
+![Python flamegraph](./python_walk_directory/python_walker.svg)
+## Rust Flamegraph
+![Rust flamegraph](./rust_walk_directory/rust_walker.svg)
+## C Flamegraph
+![C flamegraph](./c_walk_directory/c_walker.svg)
+## C++ Flamegraph
+![C++ flamegraph](./cpp_walk_directory/cpp_walker.svg)
