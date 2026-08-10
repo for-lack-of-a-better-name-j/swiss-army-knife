@@ -1,7 +1,6 @@
-#include <dirent.h>
 #include <stdio.h>
 
-int main(int argc, char *argv[]) {
+int main() {
   FILE *file = fopen("./log.txt", "a");
 
   if (file == NULL) {
@@ -10,11 +9,17 @@ int main(int argc, char *argv[]) {
   }
   // do the stuff -- since that previous returns early the other stuff doesn't
   // need to go into a return block.
-  char result = fputs("Log entry created\n", file);
+  int result = fputs("Log entry created\n", file);
   if (result == EOF) {
-    perror("error writing to file");
+    perror("error writing to stream");
     return 1;
   }
-  fclose(file);
+  if (fclose(file) == EOF) {
+    perror("Error writing to disk and closing file handle");
+    return 1;
+  }
+  // by the way if you want to flush RAM buffer without closing the handle
+  // you can use fflush()
+
   return 0;
 }
