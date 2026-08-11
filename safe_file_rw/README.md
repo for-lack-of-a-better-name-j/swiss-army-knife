@@ -23,4 +23,14 @@ C, Rust, and C++ I got the following.
 | `./c_safe_file_rw/walker` | 0.2 ± 0.1 | 0.2 | 0.7 | 1.00 |
 | `./cpp_safe_file_rw/safe_file_rw_cpp` | 0.6 ± 0.2 | 0.5 | 9.4 | 2.73 ± 1.14 |
 
+## Python Flamegraph
+![Flamegraph for Python version](./python_safe_file_rw/python_safe_file_rw.svg)
 
+## Rust Flamegraph
+![Flamegraph for Rust version](./rust_safe_file_rw/rust_safe_file_rw.svg)
+
+## C Flamegraph
+![Flamegraph for C version](./c_safe_file_rw/c_safe_file_rw.svg)
+
+## C++ Flamegraph
+![Flamegraph for C++ version](./cpp_safe_file_rw/cpp_safe_file_rw.svg)
